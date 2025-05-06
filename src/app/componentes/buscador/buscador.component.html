@@ -1,0 +1,36 @@
+<div class="glass-container">
+  <div class="glass-card">
+    <h1>Buscar Receta por Ingredientes</h1>
+    <img src="https://media-public.canva.com/atWG8/MAF-OXatWG8/1/s.png" alt="Icono receta" class="recipe-icon" />
+
+    <form (ngSubmit)="buscarReceta()">
+      <div class="form-group">
+        <label for="ingredientes">Ingredientes (separados por coma):</label>
+        <input
+          type="text"
+          id="ingredientes"
+          name="ingredientes"
+          [(ngModel)]="ingredientes"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="loading">Buscar</button>
+      </div>
+    </form>
+
+    <!-- Mostrar "Generando receta..." mientras carga -->
+    <div *ngIf="loading">Generando receta...</div>
+
+    <!-- Mostrar receta si existe -->
+    <div  *ngIf="receta" class="receta-generada">
+      <h2>Receta Generada:</h2>
+      <p>{{ receta }}</p>
+    </div>
+  </div>
+
+  <div class="side-images">
+    <img src="assets/4.png" alt="Plato 1" class="side-image left" />
+    <img src="assets/2.png" alt="Plato 2" class="side-image right" />
+  </div>
+</div>
