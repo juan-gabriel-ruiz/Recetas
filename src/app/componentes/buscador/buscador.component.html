@@ -19,18 +19,24 @@
       </div>
     </form>
 
-    <!-- Mostrar "Generando receta..." mientras carga -->
     <div *ngIf="loading">Generando receta...</div>
 
-    <!-- Mostrar receta si existe -->
-    <div  *ngIf="receta" class="receta-generada">
-      <h2>Receta Generada:</h2>
-      <p>{{ receta }}</p>
+    <!-- Contenedor de las recetas en fila -->
+    <div class="recetas-container" *ngIf="recetaSeparada1 || recetaSeparada2">
+      <div *ngIf="recetaSeparada1" class="receta-generada">
+        <h2>Receta 1:</h2>
+        <p>{{ recetaSeparada1 }}</p>
+      </div>
+
+      <div *ngIf="recetaSeparada2" class="receta-generada">
+        <h2>Receta 2:</h2>
+        <p>{{ recetaSeparada2 }}</p>
+      </div>
     </div>
   </div>
 
   <div class="side-images">
-    <img src="assets/4.png" alt="Plato 1" class="side-image left" />
-    <img src="assets/2.png" alt="Plato 2" class="side-image right" />
+    <img src="/assets/4.png" alt="Plato 1" class="side-image left" />
+    <img src="/assets/2.png" alt="Plato 2" class="side-image right" />
   </div>
 </div>

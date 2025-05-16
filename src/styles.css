@@ -8,7 +8,7 @@
 }
 body{
     background-color: #CADBB7;
-    opacity: 0.8;
+    opacity: 0.99;
     background-image:  radial-gradient(#21561b 1.55px, transparent 1.55px), radial-gradient(#21561b 1.55px, #CADBB7 1.55px);
     background-size: 62px 62px;
     background-position: 0 0,31px 31px;
